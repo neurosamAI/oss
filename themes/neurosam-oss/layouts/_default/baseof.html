@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  {{ partial "head.html" . }}
+</head>
+<body class="bg-brand-950 text-gray-200 min-h-screen flex flex-col antialiased selection:bg-brand-500/30">
+  {{ partial "header.html" . }}
+  <main class="flex-1 pt-24">
+    {{ block "main" . }}{{ end }}
+  </main>
+  {{ partial "footer.html" . }}
+
+  <script>
+    window.addEventListener('scroll', () => {
+      const nav = document.getElementById('nav');
+      if (window.scrollY > 10) {
+        nav.classList.add('shadow-lg', 'shadow-black/20');
+      } else {
+        nav.classList.remove('shadow-lg', 'shadow-black/20');
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+<meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+<meta name="author" content="{{ .Site.Params.author }}">
+{{ with .Site.Params.keywords }}<meta name="keywords" content="{{ . }}">{{ end }}
+<link rel="canonical" href="{{ .Permalink }}">
+
+<!-- Open Graph -->
+<meta property="og:title" content="{{ .Title }}">
+<meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:site_name" content="{{ .Site.Title }}">
+<meta property="og:locale" content="ko_KR">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="{{ .Title }}">
+<meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          sans: ['Noto Sans KR', 'Inter', 'system-ui', 'sans-serif'],
+          display: ['Inter', 'Noto Sans KR', 'sans-serif'],
+        },
+        colors: {
+          brand: {
+            50: '#eff6ff',
+            100: '#dbeafe',
+            200: '#bfdbfe',
+            400: '#60a5fa',
+            500: '#3b82f6',
+            600: '#2563eb',
+            700: '#1d4ed8',
+            900: '#0c1527',
+            950: '#080e1a',
+          }
+        }
+      }
+    }
+  }
+</script>
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+<!-- FontAwesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Noto Sans KR', 'Inter', sans-serif; }
+  .text-gradient {
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .line-glow {
+    background: linear-gradient(90deg, transparent, rgba(59,130,246,0.3), transparent);
+    height: 1px;
+  }
+
+  /* Prose */
+  .prose { font-size: 1.0625rem; line-height: 1.9; color: #d1d5db; }
+  .prose h1 { font-size: 2rem; font-weight: 800; color: #f9fafb; margin-top: 3rem; margin-bottom: 1rem; letter-spacing: -0.02em; }
+  .prose h2 { font-size: 1.5rem; font-weight: 700; color: #f3f4f6; margin-top: 2.5rem; margin-bottom: 0.75rem; padding-bottom: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.06); }
+  .prose h3 { font-size: 1.25rem; font-weight: 600; color: #e5e7eb; margin-top: 2rem; margin-bottom: 0.5rem; }
+  .prose p { color: #9ca3af; margin-bottom: 1.25rem; word-break: keep-all; }
+  .prose a { color: #60a5fa; text-decoration: underline; text-underline-offset: 3px; text-decoration-color: rgba(96,165,250,0.25); }
+  .prose a:hover { color: #93c5fd; text-decoration-color: rgba(96,165,250,0.5); }
+  .prose strong { color: #e5e7eb; font-weight: 600; }
+  .prose ul { list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1.25rem; }
+  .prose ol { list-style-type: decimal; padding-left: 1.5rem; margin-bottom: 1.25rem; }
+  .prose li { color: #9ca3af; margin-bottom: 0.5rem; line-height: 1.8; }
+  .prose li::marker { color: #4b5563; }
+  .prose code { color: #e5e7eb; background: rgba(255,255,255,0.05); padding: 2px 6px; border-radius: 4px; font-size: 0.9em; }
+  .prose pre { background: #0c1527; border: 1px solid rgba(255,255,255,0.06); border-radius: 8px; padding: 1.25rem; overflow-x: auto; margin: 1.5rem 0; }
+  .prose pre code { background: none; padding: 0; font-size: 0.875rem; line-height: 1.7; color: #d1d5db; }
+</style>
