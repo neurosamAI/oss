@@ -5,12 +5,12 @@ description: "경량 에이전트리스 배포 오케스트레이터. Kubernetes
 date: 2026-03-26
 icon: "fas fa-rocket"
 iconGradient: "from-emerald-400 to-cyan-500"
-version: "v0.1.0"
+version: "v0.2.0"
 license: "MIT"
 language: "Go"
 github: "https://github.com/neurosamAI/tow-cli"
 website: "https://tow-cli.neurosam.ai"
-tags: ["Deployment", "DevOps", "CLI", "SSH", "Go", "Agentless"]
+tags: ["Deployment", "DevOps", "CLI", "SSH", "Go", "Agentless", "MCP"]
 install:
   - label: "Homebrew"
     command: "brew install neurosamAI/tap/tow"
@@ -58,6 +58,9 @@ comparison:
     - ["내장 헬스체크", "4가지", "플러그인", "✗", "✓"]
     - ["즉시 롤백", "✓ (심링크)", "재실행 필요", "✓ (심링크)", "✓ (컨테이너)"]
     - ["다중 언어 네이티브", "12개 타입", "플레이북", "Ruby 중심", "Docker 이미지"]
+    - ["멀티서버 로그 스트리밍", "✓ (색상 구분)", "✗", "✗", "✗"]
+    - ["배포 전 diff 비교", "✓", "✗", "✗", "✗"]
+    - ["AI 에이전트 연동 (MCP)", "✓", "✗", "✗", "✗"]
 ---
 
 ## Quick Start
@@ -92,6 +95,9 @@ tow rollback -e prod -m api-server
 | `tow deploy` | 패키지 → 업로드 → 설치 → 재시작 |
 | `tow status` | 모듈 상태 조회 (PID, 업타임, 메모리) |
 | `tow rollback` | 이전 배포로 즉시 복원 |
-| `tow logs` | 리모트 로그 스트리밍 |
+| `tow logs` | 리모트 로그 스트리밍 (`--all`, `-F`, 프리셋) |
+| `tow ssh` | 리모트 서버에 ad-hoc 명령 실행 |
+| `tow diff` | 배포 전 로컬 vs 리모트 코드 비교 |
+| `tow config` | CLI로 서버/모듈 설정 관리 |
 | `tow provision` | 서버 프로비저닝 (타임존, JRE, 도구) |
 | `tow mcp-server` | AI 에이전트용 MCP 서버 시작 |

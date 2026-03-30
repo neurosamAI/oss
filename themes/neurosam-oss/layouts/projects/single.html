@@ -23,7 +23,7 @@
           </div>
           <div>
             <h1 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">{{ .Title }}</h1>
-            <span class="text-sm text-gray-500">{{ .Params.version }} &middot; {{ .Params.license }}</span>
+            <span class="text-sm text-gray-500"><span class="tow-version" {{ with .Params.github }}data-repo="{{ . }}"{{ end }}>{{ .Params.version }}</span> &middot; {{ .Params.license }}</span>
           </div>
         </div>
         <p class="text-lg text-gray-400 leading-relaxed max-w-2xl mt-4">{{ .Description }}</p>

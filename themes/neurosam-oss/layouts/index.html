@@ -40,7 +40,7 @@
             </div>
             <div>
               <h3 class="text-lg font-bold text-white group-hover:text-brand-400 transition-colors">{{ .Title }}</h3>
-              <span class="text-xs text-gray-500">{{ .Params.version }}</span>
+              <span class="text-xs text-gray-500 tow-version" {{ with .Params.github }}data-repo="{{ . }}"{{ end }}>{{ .Params.version }}</span>
             </div>
           </div>
           {{ with .Params.license }}
