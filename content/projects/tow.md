@@ -5,7 +5,7 @@ description: "경량 에이전트리스 배포 오케스트레이터. Kubernetes
 date: 2026-03-26
 icon: "fas fa-rocket"
 iconGradient: "from-emerald-400 to-cyan-500"
-version: "v0.2.0"
+version: "v0.3.0"
 license: "MIT"
 language: "Go"
 github: "https://github.com/neurosamAI/tow-cli"
@@ -33,9 +33,9 @@ features:
   - title: "12개 내장 모듈 핸들러"
     icon: "fas fa-cubes"
     description: "Spring Boot, Node.js, Python, Go, Rust 등 12개 언어/프레임워크를 기본 지원합니다."
-  - title: "35개 인프라 플러그인"
+  - title: "35+ 인프라 플러그인"
     icon: "fas fa-plug"
-    description: "Kafka, Redis, MySQL, PostgreSQL, MongoDB, Elasticsearch 등 YAML 기반 플러그인을 제공합니다."
+    description: "Kafka, Redis, MySQL, PostgreSQL 등 내장 플러그인 + 커뮤니티 플러그인 생태계 (tow plugin add)."
   - title: "4가지 헬스체크"
     icon: "fas fa-heartbeat"
     description: "HTTP, TCP, 로그 패턴, 커스텀 커맨드 — 네 가지 방식의 헬스체크를 기본 제공합니다."
@@ -48,6 +48,12 @@ features:
   - title: "AI 에이전트 연동"
     icon: "fas fa-robot"
     description: "MCP Server를 내장하여 Claude, Cursor, Windsurf 등 AI 에이전트와 네이티브로 연동됩니다."
+  - title: "배포 메트릭스"
+    icon: "fas fa-chart-bar"
+    description: "tow metrics로 배포 빈도, 액션 분류, 모듈별 통계를 바 차트로 확인합니다."
+  - title: "인터랙티브 선택"
+    icon: "fas fa-hand-pointer"
+    description: "서버/모듈을 생략하면 대화형으로 선택. 멀티모듈 로그도 쉼표로 동시 조회합니다."
 comparison:
   headers: ["", "Tow", "Ansible", "Capistrano", "Kamal"]
   rows:
@@ -61,6 +67,9 @@ comparison:
     - ["멀티서버 로그 스트리밍", "✓ (색상 구분)", "✗", "✗", "✗"]
     - ["배포 전 diff 비교", "✓", "✗", "✗", "✗"]
     - ["AI 에이전트 연동 (MCP)", "✓", "✗", "✗", "✗"]
+    - ["배포 메트릭스", "✓", "✗", "✗", "✗"]
+    - ["인터랙티브 선택", "✓", "✗", "✗", "✗"]
+    - ["커뮤니티 플러그인", "✓", "Galaxy", "✗", "✗"]
 ---
 
 ## Quick Start
@@ -99,5 +108,7 @@ tow rollback -e prod -m api-server
 | `tow ssh` | 리모트 서버에 ad-hoc 명령 실행 |
 | `tow diff` | 배포 전 로컬 vs 리모트 코드 비교 |
 | `tow config` | CLI로 서버/모듈 설정 관리 |
+| `tow metrics` | 배포 빈도, 액션/모듈별 통계 조회 |
+| `tow plugin` | 커뮤니티 플러그인 설치/제거 |
 | `tow provision` | 서버 프로비저닝 (타임존, JRE, 도구) |
 | `tow mcp-server` | AI 에이전트용 MCP 서버 시작 |
