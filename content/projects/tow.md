@@ -5,7 +5,7 @@ description: "경량 에이전트리스 배포 오케스트레이터. Kubernetes
 date: 2026-03-26
 icon: "fas fa-rocket"
 iconGradient: "from-emerald-400 to-cyan-500"
-version: "v0.3.0"
+version: "v0.3.1"
 license: "MIT"
 language: "Go"
 github: "https://github.com/neurosamAI/tow-cli"
