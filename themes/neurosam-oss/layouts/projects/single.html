@@ -1,5 +1,58 @@
 {{ define "main" }}
 
+<!-- BreadcrumbList Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "neurosam.AI Open Source", "item": "https://oss.neurosam.ai/"},
+    {"@type": "ListItem", "position": 2, "name": "Projects", "item": "https://oss.neurosam.ai/projects/"},
+    {"@type": "ListItem", "position": 3, "name": "{{ .Title }}", "item": "{{ .Permalink }}"}
+  ]
+}
+</script>
+
+<!-- SoftwareSourceCode Schema (GEO — code repository entity) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "{{ .Title }}",
+  "description": {{ .Description | jsonify }},
+  "url": "{{ .Permalink }}",
+  {{ with .Params.github }}"codeRepository": {{ . | jsonify }},{{ end }}
+  {{ with .Params.language }}"programmingLanguage": {{ . | jsonify }},{{ end }}
+  {{ with .Params.license }}"license": {{ . | jsonify }},{{ end }}
+  {{ with .Params.version }}"softwareVersion": {{ . | jsonify }},{{ end }}
+  {{ with .Params.tags }}"keywords": {{ . | jsonify }},{{ end }}
+  "author": {"@type": "Organization", "@id": "https://neurosam.ai/#organization"},
+  "publisher": {"@type": "Organization", "@id": "https://neurosam.ai/#organization"}
+}
+</script>
+
+<!-- SoftwareApplication Schema (GEO — installable tool entity) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "{{ .Title }}",
+  "description": {{ .Description | jsonify }},
+  "url": "{{ .Permalink }}",
+  "applicationCategory": "DeveloperApplication",
+  {{ with .Params.language }}"applicationSubCategory": "{{ . }} CLI",{{ end }}
+  "operatingSystem": "macOS, Linux, Windows",
+  {{ with .Params.version }}"softwareVersion": {{ . | jsonify }},{{ end }}
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock"
+  },
+  "publisher": {"@type": "Organization", "@id": "https://neurosam.ai/#organization"}
+}
+</script>
+
 <!-- Project Hero -->
 <section class="py-16 sm:py-20 relative overflow-hidden">
   <div class="absolute inset-0 pointer-events-none">

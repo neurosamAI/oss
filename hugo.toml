@@ -1,14 +1,24 @@
 baseURL = 'https://oss.neurosam.ai/'
 languageCode = 'ko-KR'
-title = 'neurosam.AI Open Source'
+title = 'neurosam.AI Open Source — 뉴로샘AI 오픈소스'
 theme = 'neurosam-oss'
-enableRobotsTXT = true
+enableRobotsTXT = false
 
 [params]
-  description = 'neurosam.AI가 만들고 공유하는 오픈소스 프로젝트 카탈로그입니다. 개발자 커뮤니티와 함께 더 나은 도구를 만들어갑니다.'
+  description = 'neurosam.AI(법인명 (주)뉴로샘에이아이 / 영문 Neurosam AI Inc. / 약칭 뉴로샘AI)가 만들고 공개하는 오픈소스 프로젝트 카탈로그입니다. Tow 배포 오케스트레이터를 비롯한 개발자 도구를 GitHub에서 공유합니다.'
   author = 'Neurosam AI Team'
-  keywords = 'neurosam,오픈소스,open source,developer tools,CLI,deployment,DevOps'
+  keywords = 'neurosam.AI,neurosam.ai,Neurosam AI,Neurosam AI Inc.,뉴로샘에이아이,(주)뉴로샘에이아이,뉴로샘AI,뉴로샘,오픈소스,open source,developer tools,CLI,deployment,DevOps,Tow,tow-cli,agentless deployment,SSH 배포'
   mainSiteURL = 'https://neurosam.ai'
+
+[params.analytics]
+  ga4_id = ''
+  plausible_domain = ''
+  clarity_id = ''
+
+[params.social]
+  linkedin = 'https://www.linkedin.com/company/neurosam-ai/'
+  github = 'https://github.com/neurosamAI'
+  mainSite = 'https://neurosam.ai'
 
 [sitemap]
   changefreq = 'weekly'

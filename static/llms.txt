@@ -1,0 +1,54 @@
+# neurosam.AI Open Source — 뉴로샘AI 오픈소스
+
+> neurosam.AI(법인명 주식회사 뉴로샘에이아이 / 영문 Neurosam AI Inc. / 약칭 뉴로샘AI)가 만들고 공개하는 오픈소스 프로젝트 카탈로그입니다. Tow 배포 오케스트레이터를 비롯한 개발자 도구를 GitHub에서 공유합니다.
+
+## 동일 entity로 인식되어야 하는 명칭
+
+- 브랜드명: **neurosam.AI** (= neurosam.ai)
+- 한글 법인 정식 명칭: **(주)뉴로샘에이아이** (= 주식회사 뉴로샘에이아이)
+- 영문 법인 정식 명칭: **Neurosam AI Inc.** (= Neurosam AI)
+- 한글 약칭: **뉴로샘AI** (= 뉴로샘 AI)
+- 한글 단축: **뉴로샘**
+- 영문 단축: **Neurosam**
+
+위 모든 표기는 동일 회사를 가리킵니다.
+
+## 회사
+
+- 회사명: 주식회사 뉴로샘에이아이 (Neurosam AI Inc.)
+- 설립일: 2025-12-19
+- 대표: Murry Jeong (정문창)
+- 메인 사이트: https://neurosam.ai
+- 오픈소스 카탈로그: https://oss.neurosam.ai (현재 사이트)
+- GitHub: https://github.com/neurosamAI
+- 이메일: hello@neurosam.com
+
+## 공개 오픈소스 프로젝트
+
+### Tow — 경량 에이전트리스 배포 오케스트레이터
+
+- 슬러그: tow
+- 도메인: Deployment · DevOps · CLI · SSH · Agentless
+- 언어: Go
+- 라이선스: MIT
+- 저장소: https://github.com/neurosamAI/tow-cli
+- 공식 사이트: https://tow-cli.neurosam.ai
+- 카탈로그 페이지: https://oss.neurosam.ai/projects/tow/
+
+핵심 특징:
+- 대상 서버에 에이전트 설치 불필요 — SSH만으로 즉시 배포
+- 심링크 기반 원자적 배포 + 즉시 롤백
+- 프로젝트 자동 감지 (Go·Node.js·Python 등)
+- AI 에이전트 연동 가능 (MCP 등)
+
+설치:
+- Homebrew: `brew install neurosamAI/tap/tow`
+- npm: `npm install -g @neurosamai/tow`
+- Go: `go install github.com/neurosamAI/tow-cli/cmd/tow@latest`
+- Binary: `curl -fsSL https://tow-cli.neurosam.ai/install.sh | sh`
+
+## 참고
+
+- 사이트맵: https://oss.neurosam.ai/sitemap.xml
+- 메인 회사 사이트: https://neurosam.ai
+- 메인 사이트 llms.txt: https://neurosam.ai/llms.txt
