@@ -7,9 +7,16 @@
       </a>
 
       <div class="hidden md:flex items-center gap-1">
-        <a href="/" class="px-3 py-2 text-sm text-gray-400 hover:text-white transition-colors rounded-lg hover:bg-white/5">프로젝트</a>
+        <a href="/" class="px-3 py-2 text-sm text-gray-400 hover:text-white transition-colors rounded-lg hover:bg-white/5">{{ .Site.Params.navProjects }}</a>
         <a href="{{ .Site.Params.mainSiteURL }}" class="px-3 py-2 text-sm text-gray-400 hover:text-white transition-colors rounded-lg hover:bg-white/5">neurosam.AI</a>
-        <a href="{{ .Site.Params.mainSiteURL }}/blog/" class="px-3 py-2 text-sm text-gray-400 hover:text-white transition-colors rounded-lg hover:bg-white/5">블로그</a>
+        <a href="{{ .Site.Params.mainSiteURL }}/blog/" class="px-3 py-2 text-sm text-gray-400 hover:text-white transition-colors rounded-lg hover:bg-white/5">{{ .Site.Params.navBlog }}</a>
+        {{ with .AllTranslations.ByLanguage }}
+        <div class="flex items-center gap-1 text-xs ml-3">
+          {{ range . }}
+          <a href="{{ .Permalink }}" class="px-2 py-1 rounded transition-colors {{ if eq .Language.Lang $.Language.Lang }}text-gray-300 bg-white/[0.06]{{ else }}text-gray-600 hover:text-gray-300{{ end }}">{{ .Language.LanguageName }}</a>
+          {{ end }}
+        </div>
+        {{ end }}
         <a href="https://github.com/neurosamAI" target="_blank" class="ml-3 px-4 py-2 border border-white/10 hover:border-white/20 text-gray-300 hover:text-white text-sm font-medium rounded-lg transition-all flex items-center gap-2">
           <i class="fa-brands fa-github"></i> GitHub
         </a>
@@ -23,9 +30,14 @@
 
   <div id="oss-mobile-menu" class="hidden md:hidden border-t border-white/[0.06]">
     <div class="px-4 py-3 space-y-1 bg-brand-950/95 backdrop-blur-xl">
-      <a href="/" class="block px-3 py-2.5 text-gray-300 hover:text-white rounded-lg text-sm">프로젝트</a>
+      <a href="/" class="block px-3 py-2.5 text-gray-300 hover:text-white rounded-lg text-sm">{{ .Site.Params.navProjects }}</a>
       <a href="{{ .Site.Params.mainSiteURL }}" class="block px-3 py-2.5 text-gray-300 hover:text-white rounded-lg text-sm">neurosam.AI</a>
-      <a href="{{ .Site.Params.mainSiteURL }}/blog/" class="block px-3 py-2.5 text-gray-300 hover:text-white rounded-lg text-sm">블로그</a>
+      <a href="{{ .Site.Params.mainSiteURL }}/blog/" class="block px-3 py-2.5 text-gray-300 hover:text-white rounded-lg text-sm">{{ .Site.Params.navBlog }}</a>
+      {{ with .AllTranslations.ByLanguage }}
+      {{ range . }}
+      <a href="{{ .Permalink }}" class="block px-3 py-2.5 text-gray-300 hover:text-white rounded-lg text-sm">{{ .Language.LanguageName }}</a>
+      {{ end }}
+      {{ end }}
       <a href="https://github.com/neurosamAI" target="_blank" class="block px-3 py-2.5 text-gray-300 hover:text-white rounded-lg text-sm"><i class="fa-brands fa-github mr-1"></i> GitHub</a>
     </div>
   </div>

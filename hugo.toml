@@ -1,13 +1,11 @@
 baseURL = 'https://oss.neurosam.ai/'
-languageCode = 'ko-KR'
-title = 'neurosam.AI Open Source — 뉴로샘AI 오픈소스'
 theme = 'neurosam-oss'
 enableRobotsTXT = false
+defaultContentLanguage = 'ko'
+defaultContentLanguageInSubdir = false
 
 [params]
-  description = 'neurosam.AI(법인명 (주)뉴로샘에이아이 / 영문 Neurosam AI Inc. / 약칭 뉴로샘AI)가 만들고 공개하는 오픈소스 프로젝트 카탈로그입니다. Tow 배포 오케스트레이터를 비롯한 개발자 도구를 GitHub에서 공유합니다.'
   author = 'Neurosam AI Team'
-  keywords = 'neurosam.AI,neurosam.ai,Neurosam AI,Neurosam AI Inc.,뉴로샘에이아이,(주)뉴로샘에이아이,뉴로샘AI,뉴로샘,오픈소스,open source,developer tools,CLI,deployment,DevOps,Tow,tow-cli,agentless deployment,SSH 배포'
   mainSiteURL = 'https://neurosam.ai'
 
 [params.analytics]
@@ -19,6 +17,49 @@ enableRobotsTXT = false
   linkedin = 'https://www.linkedin.com/company/neurosam-ai/'
   github = 'https://github.com/neurosamAI'
   mainSite = 'https://neurosam.ai'
+
+[languages]
+  [languages.ko]
+    languageCode = 'ko-KR'
+    languageName = '한국어'
+    weight = 1
+    title = 'neurosam.AI Open Source — 뉴로샘AI 오픈소스'
+    [languages.ko.params]
+      description = 'neurosam.AI(법인명 (주)뉴로샘에이아이 / 영문 Neurosam AI Inc. / 약칭 뉴로샘AI)가 만들고 공개하는 오픈소스 프로젝트 카탈로그입니다. Tow 배포 오케스트레이터를 비롯한 개발자 도구를 GitHub에서 공유합니다.'
+      keywords = 'neurosam.AI,neurosam.ai,Neurosam AI,Neurosam AI Inc.,뉴로샘에이아이,(주)뉴로샘에이아이,뉴로샘AI,뉴로샘,오픈소스,open source,developer tools,CLI,deployment,DevOps,Tow,tow-cli,agentless deployment,SSH 배포'
+      ogLocale = 'ko_KR'
+      navProjects = '프로젝트'
+      navBlog = '블로그'
+      heroLine1 = 'neurosam.AI가 만들고 공유하는 오픈소스 프로젝트입니다.'
+      heroLine2 = '개발자 커뮤니티와 함께 더 나은 도구를 만들어갑니다.'
+      comingSoonTitle = 'More coming soon'
+      comingSoonSubtitle = '새로운 프로젝트가 준비 중입니다'
+      breadcrumbProjects = '프로젝트'
+      ctaTitle = '사용해 보세요'
+      ctaSubtitle = '피드백과 기여를 환영합니다. GitHub에서 이슈를 남기거나 PR을 보내주세요.'
+      ctaGithubBtn = 'GitHub에서 보기'
+      ctaDocsBtn = '문서 읽기'
+
+  [languages.en]
+    languageCode = 'en'
+    languageName = 'English'
+    weight = 2
+    title = 'neurosam.AI Open Source'
+    [languages.en.params]
+      description = 'The open-source project catalog built and shared by neurosam.AI (Neurosam AI Inc. / 뉴로샘AI) — developer tools including the Tow deployment orchestrator, shared on GitHub.'
+      keywords = 'neurosam.AI,neurosam.ai,Neurosam AI,Neurosam AI Inc.,open source,developer tools,CLI,deployment,DevOps,Tow,tow-cli,agentless deployment,SSH deployment'
+      ogLocale = 'en_US'
+      navProjects = 'Projects'
+      navBlog = 'Blog'
+      heroLine1 = 'Open-source projects built and shared by neurosam.AI.'
+      heroLine2 = "Building better tools together with the developer community."
+      comingSoonTitle = 'More coming soon'
+      comingSoonSubtitle = 'A new project is in the works'
+      breadcrumbProjects = 'Projects'
+      ctaTitle = 'Try it out'
+      ctaSubtitle = 'Feedback and contributions are welcome — open an issue or send a PR on GitHub.'
+      ctaGithubBtn = 'View on GitHub'
+      ctaDocsBtn = 'Read the docs'
 
 [sitemap]
   changefreq = 'weekly'
