@@ -114,9 +114,9 @@
     <h2 class="text-sm font-semibold tracking-wider uppercase text-brand-400 mb-6">Quick Install</h2>
     <div class="grid gap-4 sm:grid-cols-2">
       {{ range . }}
-      <div class="p-4 rounded-xl border border-white/[0.06] bg-white/[0.02]">
+      <div class="p-4 rounded-xl border border-white/[0.06] bg-white/[0.02] min-w-0">
         <div class="text-xs text-gray-500 font-medium mb-2">{{ .label }}</div>
-        <code class="text-sm text-gray-300 font-mono">{{ .command }}</code>
+        <code class="text-sm text-gray-300 font-mono break-all">{{ .command }}</code>
       </div>
       {{ end }}
     </div>
