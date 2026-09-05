@@ -5,7 +5,7 @@ description: "A fully local, speaker-diarized transcription app. It turns mp4 vi
 date: 2026-09-05
 icon: "fas fa-closed-captioning"
 iconGradient: "from-violet-400 to-fuchsia-500"
-version: "v1.0.0"
+version: "v1.0.1"
 license: "MIT"
 language: "Python"
 github: "https://github.com/neurosamAI/video2text"
@@ -13,7 +13,7 @@ website: "https://video2text.neurosam.ai"
 tags: ["Transcription", "Speaker Diarization", "Whisper", "macOS", "Apple Silicon", "Privacy", "Local AI"]
 install:
   - label: "Download (macOS, Apple Silicon)"
-    command: "curl -LO https://github.com/neurosamAI/video2text/releases/latest/download/video2text-v1.0.0-macos-arm64.zip"
+    command: "curl -LO https://github.com/neurosamAI/video2text/releases/latest/download/video2text-v1.0.1-macos-arm64.zip"
   - label: "Build from source"
     command: "git clone https://github.com/neurosamAI/video2text && cd video2text && ./build.sh"
 features:
@@ -54,7 +54,7 @@ video2text is a fully local app: feed it an mp4 file (typically a video-conferen
 
 ### Basic Workflow
 
-No build required: grab `video2text-v1.0.0-macos-arm64.zip` from the [latest release](https://github.com/neurosamAI/video2text/releases/latest), unzip it, and double-click `video2text.app`.
+No build required: grab `video2text-v1.0.1-macos-arm64.zip` from the [latest release](https://github.com/neurosamAI/video2text/releases/latest), unzip it, and double-click `video2text.app`.
 
 To build it from source instead:
 
