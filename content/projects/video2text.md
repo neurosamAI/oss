@@ -5,17 +5,17 @@ description: "완전 로컬로 동작하는 화자 분리 전사 앱. mp4 영상
 date: 2026-09-05
 icon: "fas fa-closed-captioning"
 iconGradient: "from-violet-400 to-fuchsia-500"
-version: "v1.0"
+version: "v1.0.0"
 license: "MIT"
 language: "Python"
 github: "https://github.com/neurosamAI/video2text"
 website: "https://video2text.neurosam.ai"
 tags: ["Transcription", "Speaker Diarization", "Whisper", "macOS", "Apple Silicon", "Privacy", "Local AI"]
 install:
-  - label: "Git clone"
-    command: "git clone https://github.com/neurosamAI/video2text"
-  - label: "Setup"
-    command: "cd video2text && ./build.sh"
+  - label: "Download (macOS, Apple Silicon)"
+    command: "curl -LO https://github.com/neurosamAI/video2text/releases/latest/download/video2text-v1.0.0-macos-arm64.zip"
+  - label: "Build from source"
+    command: "git clone https://github.com/neurosamAI/video2text && cd video2text && ./build.sh"
 features:
   - title: "완전 로컬 처리"
     icon: "fas fa-lock"
@@ -53,6 +53,11 @@ comparison:
 video2text는 mp4(주로 화상회의 녹화본)나 오디오 파일을 넣으면 화자 분리(diarization)된 텍스트 전사본을 만들어주는 완전 로컬 앱입니다. 온라인 회의(화면 분할)든 오프라인 회의 녹화(단일 카메라 + 믹스된 오디오)든, 오디오 트랙 하나에 여러 화자가 섞여 들어온다는 점은 동일하므로 같은 파이프라인(오디오 기반 화자 분리)으로 처리합니다.
 
 ### 기본 워크플로우
+
+빌드 없이 바로 쓰려면 [최신 릴리즈](https://github.com/neurosamAI/video2text/releases/latest)에서
+`video2text-v1.0.0-macos-arm64.zip`을 받아 압축을 풀고 `video2text.app`을 더블클릭하면 됩니다.
+
+직접 빌드하려면:
 
 ```bash
 # 저장소 클론 & 앱 번들 빌드
