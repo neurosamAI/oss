@@ -14,7 +14,7 @@
 <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
 <meta property="og:url" content="{{ .Permalink }}">
 <meta property="og:site_name" content="{{ .Site.Title }}">
-<meta property="og:locale" content="ko_KR">
+<meta property="og:locale" content="{{ .Site.Params.ogLocale }}">
 <meta property="og:image" content="{{ $og_image }}">
 <meta property="og:image:alt" content="neurosam.AI Open Source — 뉴로샘AI 오픈소스 프로젝트">
 
@@ -75,9 +75,9 @@
   "name": "neurosam.AI Open Source",
   "alternateName": ["뉴로샘AI 오픈소스", "neurosam OSS"],
   "url": "https://oss.neurosam.ai/",
-  "inLanguage": "ko-KR",
+  "inLanguage": "{{ .Site.Language.LanguageCode }}",
   "publisher": {"@id": "https://neurosam.ai/#organization"},
-  "description": "neurosam.AI(뉴로샘AI)가 만들고 공개하는 오픈소스 프로젝트 카탈로그"
+  "description": {{ .Site.Params.description | jsonify }}
 }
 </script>
 

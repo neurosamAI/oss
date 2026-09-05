@@ -63,7 +63,7 @@
   <div class="max-w-5xl mx-auto px-5 sm:px-8 relative">
     <!-- Breadcrumb -->
     <div class="flex items-center gap-2 text-sm text-gray-500 mb-8">
-      <a href="/" class="hover:text-gray-300 transition-colors">프로젝트</a>
+      <a href="/" class="hover:text-gray-300 transition-colors">{{ .Site.Params.breadcrumbProjects }}</a>
       <i class="fas fa-chevron-right text-[10px] text-gray-700"></i>
       <span class="text-gray-400">{{ .Title }}</span>
     </div>
@@ -90,7 +90,7 @@
         {{ end }}
         {{ with .Params.website }}
         <a href="{{ . }}" target="_blank" class="inline-flex items-center gap-2 px-5 py-2.5 bg-brand-500 hover:bg-brand-600 text-white text-sm font-semibold rounded-lg transition-all">
-          <i class="fas fa-book"></i> Documentation
+          <i class="fas fa-book"></i> {{ $.Site.Params.ctaDocsBtn }}
         </a>
         {{ end }}
       </div>
@@ -189,17 +189,17 @@
 <section class="py-20">
   <div class="max-w-5xl mx-auto px-5 sm:px-8 text-center">
     <div class="p-8 sm:p-12 rounded-2xl border border-white/[0.06] bg-white/[0.02]">
-      <h2 class="text-2xl sm:text-3xl font-bold text-white mb-4">사용해 보세요</h2>
-      <p class="text-gray-400 mb-8 max-w-lg mx-auto">피드백과 기여를 환영합니다. GitHub에서 이슈를 남기거나 PR을 보내주세요.</p>
+      <h2 class="text-2xl sm:text-3xl font-bold text-white mb-4">{{ .Site.Params.ctaTitle }}</h2>
+      <p class="text-gray-400 mb-8 max-w-lg mx-auto">{{ .Site.Params.ctaSubtitle }}</p>
       <div class="flex flex-wrap justify-center gap-4">
         {{ with .Params.github }}
         <a href="{{ . }}" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 bg-brand-500 hover:bg-brand-600 text-white font-semibold rounded-lg transition-all">
-          <i class="fa-brands fa-github"></i> GitHub에서 보기
+          <i class="fa-brands fa-github"></i> {{ $.Site.Params.ctaGithubBtn }}
         </a>
         {{ end }}
         {{ with .Params.website }}
         <a href="{{ . }}" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 border border-white/10 hover:border-white/20 text-gray-300 hover:text-white font-medium rounded-lg transition-all">
-          <i class="fas fa-book"></i> 문서 읽기
+          <i class="fas fa-book"></i> {{ $.Site.Params.ctaDocsBtn }}
         </a>
         {{ end }}
       </div>
